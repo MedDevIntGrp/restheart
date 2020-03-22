@@ -15,7 +15,7 @@ volumes:
 
 services:
    restheart-security:
-      image: softinstigate/restheart-security
+      image: softinstigate/restheart-security:1.3.4
       container_name: restheart-security
       depends_on:
          - restheart
@@ -31,7 +31,7 @@ services:
       #    - ./etc/acl.yml:/opt/restheart/etc/acl.yml:ro
 
    restheart:
-      image: softinstigate/restheart
+      image: softinstigate/restheart:4.1.10
       container_name: restheart
       command: ["--envFile", "etc/default.properties"]
       environment:
